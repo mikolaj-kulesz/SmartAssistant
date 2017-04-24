@@ -1,0 +1,45 @@
+/* ==========================================================================
+  Base
+/* ========================================================================== */
+html, body {
+  height: 100%;
+  font-size: 14px;
+}
+html,
+button,
+input,
+select,
+textarea {
+  font-family: $font-primary;
+  color: $base-color;
+}
+body {
+  margin: 0;
+  height: 100%;
+  font-size: $size_base;
+  line-height: 1.4;
+  color: $black;
+  font-family: $font-primary;
+  background: $base-color;
+  background: $base-color;
+
+}
+* {
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+  Links
+/* ========================================================================== */
+a {
+  text-decoration: none;
+  color:inherit;
+}
+a:focus,
+a:hover {
+}
+a:focus,
+a:active,
+a:hover {
+  outline: 0;
+}

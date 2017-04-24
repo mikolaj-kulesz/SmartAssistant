@@ -1,0 +1,519 @@
+.header {
+  @extend .layout;
+  margin-bottom: 20px;
+
+  &__content {
+    background: url($images_dir + 'header-photo.jpg') no-repeat top 40% right 0px;
+    padding-bottom: 36px;
+
+    @media #{$mobile} {
+      background: none;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0px;
+    }
+  }
+
+  &__btn-box {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+
+    &__btn {
+      padding: 10px 38px 10px 20px;
+      color: $white;
+      font-size: 0.8em;
+      background: $light-purple url($images_dir + 'refresh-icon.png') no-repeat top 50% right 10px;
+      cursor: pointer;
+    }
+  }
+
+  &__logo {
+    background: rgba(255,255,255,0.7);
+    padding: 20px;
+    color: $purple;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media #{$mobile} {
+      text-align: center;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    &__name {
+
+      @media #{$mobile} {
+        width: 100%;
+      }
+
+      h1 {
+        font-size: 3.2em;
+        text-transform: uppercase;
+        font-weight: 300;
+
+        @media #{$mobile} {
+          font-size: 1.8em;
+        }
+      }
+
+      h2 {
+        font-size: 1.2em;
+
+        @media #{$mobile} {
+          font-size: 1em;
+        }
+      }
+    }
+
+    &__steps {
+      display: none;
+
+      @media #{$middle} {
+        display: flex;
+      }
+
+      li {
+        display: block;
+        background: $white;
+        color: $black;
+        height: 24px;
+        width: 24px;
+        line-height: 24px;
+        border: 1px solid $black;
+        border-radius: 5px;
+        margin: 10px 2px;
+        text-align: center;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &.active {
+          border: 1px solid $purple;
+          background: $purple;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.steps {
+  @extend .layout;
+  margin-bottom: 30px;
+
+  @media #{$middle} {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    background: $light-purple;
+
+    li {
+      width: 20.5%;
+      height: 41px;
+      line-height: 41px;
+      text-align: center;
+      color: #fff;
+      padding-left: 16px;
+      background: url($images_dir + 'arrow-one.png') no-repeat top 0 left 0;
+
+      &:first-child {
+        background: none;
+        width: 18%;
+        padding-left: 12px;
+      }
+
+      &.active {
+        background-color: $purple;
+        background-image: url($images_dir + 'arrow-two.png');
+      }
+    }
+  }
+}
+
+.tiles {
+  @extend .layout;
+  margin-bottom: 20px;
+
+  &__title {
+    font-size: 1.4em;
+    text-align: center;
+    color: $purple;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    @media #{$middle} {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__btn-box {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 10px;
+
+    &__btn {
+      color: $purple;
+      text-transform: uppercase;
+      font-size: 1.2em;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover, &:active {
+        opacity: 0.8;
+      }
+
+      &:first-child {
+        &:before {
+          content: '';
+          display: block;
+          width: 47px;
+          height: 47px;
+          background: #582582 url($images_dir + 'prev-arrow.png') no-repeat top 50% left 50%;
+          margin-right: 10px;
+        }
+      }
+
+      &:last-child {
+        margin-left: auto;
+        &:after {
+          content: '';
+          display: block;
+          width: 47px;
+          height: 47px;
+          background: #582582 url($images_dir + 'next-arrow.png') no-repeat top 50% left 50%;
+          margin-left: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+
+.face-item {
+  margin: 16px 10px;
+  max-width: 216px;
+
+  @media #{$middle} {
+    min-width: 216px;
+    margin: 16px 20px;
+  }
+
+  @media #{$mobile} {
+    min-width: 0px;
+  }
+
+  &.large {
+    max-width: 294px;
+
+    @media #{$middle} {
+      min-width: 294px;
+    }
+
+    @media #{$mobile} {
+      min-width: 0px;
+    }
+  }
+
+  &__photo {
+    img {
+      width:100%;
+      display: block;
+    }
+  }
+
+  &__options {
+    padding: 16px 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    label {
+      margin-left: 6px;
+    }
+
+    i {
+      display:inline-block;
+      width: 16px;
+      height: 16px;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 0.8em;
+      background: $purple url($images_dir + 'i-ico.png') no-repeat top 2px left 50%;
+      line-height: 16px;
+      text-align: center;
+      margin-left: 6px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+
+
+.products {
+  @extend .layout;
+
+  & > h2 {
+    background: $purple;
+    color: $white;
+    padding: 14px;
+    text-align: center;
+    font-size: 1.3em;
+    margin-bottom: 14px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+
+    @media #{$middle} {
+      flex-wrap: wrap;
+      max-width: 220px;
+      margin: 0 10px 10px 10px;
+    }
+
+    @media #{$mobile} {
+      max-width: 100%;
+      min-width: 100%;
+    }
+
+    &__photo-box {
+      width: 250px;
+
+      @media #{$middle} {
+        width: 100%;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+      }
+    }
+    &__option-box {
+      width: calc(100% - 491px);
+
+      @media #{$middle} {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      & > h3 {
+        font-size: 1.3em;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+        text-transform: uppercase;
+      }
+
+      ul {
+        font-size: 0.9em;
+
+        li {
+          margin-bottom: 4px;
+          display: flex;
+          align-items: center;
+
+          &:last-child {
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      &__more-btn {
+        strong {
+          font-weight: bold;
+          background: url($images_dir + 'arrow-down.png') no-repeat top 50% right 0;
+          padding-right: 20px;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+
+    &__shop-box {
+      width: 211px;
+      @media #{$middle} {
+        width: 100%;
+      }
+
+      &__price-box {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        text-align: center;
+
+        span {
+          font-weight: bold;
+          display: block;
+          font-size: 0.8em;
+        }
+
+        strong {
+          font-size: 1.4em;
+          font-weight: bold;
+          display: block;
+          color: $purple;
+          margin-top: 10px;
+        }
+      }
+
+      &__order-box {
+        @extend .green-grad;
+        margin-top: 10px;
+        color: #fff;
+        border-radius: 5px;
+
+        a {
+          padding: 10px 16px;
+          color: #fff;
+          text-decoration: none;
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          align-items: center;
+          text-shadow: 1px 1px 0 rgba(0,0,0,0.6);
+
+          &:before {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: url($images_dir + 'trolley.svg') no-repeat top 50% left 50%;
+            background-size: contain;
+            margin-right: 6px;
+          }
+
+          &:after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: $light-green url($images_dir + 'arrow.svg') no-repeat top 50% left 8px;
+            background-size: 16px auto;
+            margin-left: 6px;
+            border-radius: 15px;
+            box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.6);
+          }
+        }
+      }
+    }
+  }
+}
+
+.simple-slider {
+  width: 100%;
+  min-height: 310px;
+  position: relative;
+  overflow: hidden;
+  transition: min-height 0.3s ease-in-out;
+
+  &__wrapper {
+    position: absolute;
+    top: 0; left: 0;
+    width: 200%;
+    min-height: inherit;
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+
+    &__item {
+      width: 50%;
+      height: auto;
+    }
+  }
+}
+
+.switch-color {
+
+  .header {
+    &__logo {
+      color: $red;
+
+      &__steps li.active {
+        background: $red;
+      }
+    }
+
+    &__btn-box__btn {
+      background-color: $light-red;
+      background-image: url($images_dir + 'refresh-icon__red.png');
+    }
+  }
+
+  .steps ul {
+    background-color: $light-red;
+
+    li {
+      background-image: url($images_dir + 'arrow-one__red.png');
+
+      &:first-child {
+        background-image: none;
+      }
+
+      &.active {
+        background-color: $red;
+        background-image: url($images_dir + 'arrow-two__red.png');
+      }
+    }
+  }
+
+  .tiles {
+    &__title {
+      color: $red;
+    }
+    &__btn-box__btn {
+      color: $red;
+
+      &:last-child:after {
+        background: #82252b url($images_dir + 'next-arrow__red.png') no-repeat top 50% left 50%;
+      }
+      &:first-child:before {
+        background: #82252b url($images_dir + 'prev-arrow__red.png') no-repeat top 50% left 50%;
+      }
+    }
+  }
+
+  .face-item__options i {
+    background: #82252b url($images_dir + 'i-ico__red.png') no-repeat top 2px left 50%;
+  }
+
+  .products > h2 {
+    background-color: $red;
+  }
+  .products__item__shop-box__price-box strong {
+    color: $red;
+  }
+}

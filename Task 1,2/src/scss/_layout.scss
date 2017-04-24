@@ -1,0 +1,12 @@
+.layout {
+  margin: 0 auto;
+  max-width: 964px;
+  width: 100%;
+  padding: 0 20px;
+  transition: padding 0.2s linear;
+
+  @media #{$mobile} {
+    padding: 0 10px;
+  }
+}
+

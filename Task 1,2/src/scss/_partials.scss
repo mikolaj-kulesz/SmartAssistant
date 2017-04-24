@@ -1,0 +1,72 @@
+.custom-checkbox {
+  width: $small-check;
+  height: $small-check;
+  border: none;
+  background: $white;
+  position: relative;
+
+  & + label {
+    cursor: pointer;
+    margin-left: 6px;
+  }
+
+  &:after,
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0; left: 0;
+    width: $small-check;
+    height: $small-check;
+    cursor: pointer;
+    background-color: $white;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  &:after {
+    background-image: url($images_dir + 'check-no.png');
+  }
+
+  &:before {
+    background-image: url($images_dir + 'check-ok.png');
+    display: none;
+  }
+
+  &:checked {
+
+    &:before {
+      display: block;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+
+  &.big {
+    width: $big-check;
+    height: $big-check;
+
+    &:after,
+    &:before {
+      width: $big-check;
+      height: $big-check;
+    }
+
+    &:after {
+      background-image: url($images_dir + 'big-check-no.png');
+    }
+
+    &:before {
+      background-image: url($images_dir + 'big-check-ok.png');
+    }
+
+    &:checked {
+      & + label {
+        font-weight: bold;
+      }
+    }
+  }
+
+}

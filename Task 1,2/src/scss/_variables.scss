@@ -1,0 +1,38 @@
+/* ==========================================================================
+	Variables
+/* ========================================================================== */
+/* Directories */
+$images_dir: '../img/';
+
+/* Fonts */
+$font-primary: 'Roboto', sans-serif;
+
+/* Font Sizes */
+$size_base: 16px;
+$small-check: 14px;
+$big-check: 18px;
+
+/* Colors */
+$base-color: #fff;
+$light-purple: #9999cc;
+$lighter-purple: #aeaed9;
+$purple: #6600a1;
+$black: #000;
+$white: #fff;
+$light-green: #379e00;
+$light-red: #cc99b8;
+$red: #a10300;
+
+/* Gradient*/
+.green-grad {
+  background: #3e9400;
+  background: -moz-linear-gradient(top, #3e9400 0%, #287400 100%);
+  background: -webkit-linear-gradient(top, #3e9400 0%,#287400 100%);
+  background: linear-gradient(to bottom, #3e9400 0%,#287400 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e9400', endColorstr='#287400',GradientType=0 );
+}
+
+/*Media Queries */
+$middle: 'only screen and (max-width: 800px)';
+$mobile: 'only screen and (max-width: 660px)';
+$mmobile: 'only screen and (max-width: 360px)';
